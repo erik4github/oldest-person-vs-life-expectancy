@@ -131,7 +131,11 @@ window.onload = function () {
       tooltips: {
         mode: 'index',
         intersect: true,
-        itemSort: (a, b, data) => b.yLabel - a.yLabel
+        itemSort: (a, b, data) => b.yLabel - a.yLabel,
+            callbacks: {
+                label: function(tooltipItems, data) { 
+                return tooltipItems.yLabel + ' Years';
+            }
       },
       scales: {
         yAxes: [{
