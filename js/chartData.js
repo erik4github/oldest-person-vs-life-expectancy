@@ -132,11 +132,12 @@ window.onload = function () {
         mode: 'index',
         intersect: true,
         itemSort: (a, b, data) => b.yLabel - a.yLabel,
-            callbacks: {
-                label: function(tooltipItems, data) { 
-                return tooltipItems.yLabel + ' Years';
-            }
-      },
+        callbacks: {
+          label: function(tooltipItems, data) { 
+            return tooltipItems.yLabel + ' Years';
+          }
+        }
+     },
       scales: {
         yAxes: [{
           ticks: {
