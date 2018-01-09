@@ -134,7 +134,7 @@ window.onload = function () {
         itemSort: (a, b, data) => b.yLabel - a.yLabel,
         callbacks: {
           label: function(tooltipItems, data) { 
-            return tooltipItems.yLabel + ' Years';
+            return data.datasets[tooltipItems.datasetIndex].label +': ' + tooltipItems.yLabel + ' Years';
           }
         }
      },
